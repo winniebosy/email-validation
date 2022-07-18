@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+:root {
+    --main-backgroundColor: #111725;
+    --main-headingColor: #77DFC0;
+    --button-backgroundColor: #5BDAAC;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+*,
+ ::before,
+ ::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-backgroundColor);
+}
+
+.nav-container {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin-left: 1rem;
+}
+
+.hero-img-container {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-image: url('images/images/image-host-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: center center;
+}
+
+.hero-info-container {
+    border: 2px solid gold;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-top: -2rem;
+    max-width: 60%;
+    color: #ffffff;
+    background-color: var(--main-backgroundColor);
+    border: 5px solid var(--main-backgroundColor);
+}
+
+h1 {
+    margin: 2rem 2rem 0 2rem;
+    color: var(--button-backgroundColor);
+    font-size: 250%;
+}
+
+.heading-one {
+    color: #ffffff;
+}
+
+.dotted-container {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-end: 5;
+    background-image: url('images/images/bg-pattern-dots.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    padding: 6rem;
+    margin-bottom: -7rem;
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.info-desc {
+    max-width: 50%;
+    text-align: left;
+    line-height: 2;
+    margin: 0 0 1rem 1rem;
+    padding: 1rem;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-row: repeat(4, 1fr);
+}
+
+.podcast-platforms {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 0.5rem;
+}
+
+.email-form {
+    border: 2px solid red;
+    margin: 1rem;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+input[type='email'] {
+    padding: 10px 30px;
+}
+
+button[type='submit'] {
+    background-color: blue;
+    border-radius: 20px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
