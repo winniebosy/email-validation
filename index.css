@@ -1,170 +1,237 @@
-                                @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
-                             :root {
-                                --main-backgroundColor: #111725;
-                                --main-headingColor: #77DFC0;
-                                --button-backgroundColor: #5BDAAC;
-                                font-family: 'Source Sans Pro', sans-serif;
-                            }
-                            
-                            *,
-                             ::before,
-                             ::after {
-                                box-sizing: border-box;
-                            }
-                            
-                            body {
-                                background-color: var(--main-backgroundColor);
-                            }
-                            
-                            .nav-container {
-                                grid-column-start: 1;
-                                grid-column-end: 2;
-                                grid-row-start: 1;
-                                grid-row-end: 3;
-                                margin-left: 1rem;
-                            }
-                            
-                            .hero-img-container {
-                                grid-column-start: 2;
-                                grid-column-end: 5;
-                                grid-row-start: 1;
-                                grid-row-end: 4;
-                                background-image: url('images/images/image-host-desktop.jpg');
-                                background-repeat: no-repeat;
-                                background-size: cover;
-                                height: 100vh;
-                                background-position: center center;
-                            }
-                            
-                            .hero-info-container {
-                                grid-row-start: 2;
-                                grid-row-end: 5;
-                                grid-column-start: 1;
-                                grid-column-end: 3;
-                                margin-top: -2rem;
-                                max-width: 60%;
-                                color: #ffffff;
-                                background-color: var(--main-backgroundColor);
-                                border: 5px solid var(--main-backgroundColor);
-                            }
-                            
-                            h1 {
-                                margin: 2rem 2rem 0 2rem;
-                                color: var(--button-backgroundColor);
-                                font-size: 250%;
-                            }
-                            
-                            .heading-one {
-                                color: #ffffff;
-                            }
-                            
-                            .dotted-container {
-                                grid-row-start: 3;
-                                grid-row-end: 5;
-                                grid-column-end: 5;
-                                background-image: url('images/images/bg-pattern-dots.svg');
-                                background-repeat: no-repeat;
-                                background-size: contain;
-                                background-position: center center;
-                                padding: 6rem;
-                                margin-bottom: -7rem;
-                            }
-                            
-                            .sr-only {
-                                position: absolute;
-                                left: -10000px;
-                                top: auto;
-                                width: 1px;
-                                height: 1px;
-                                overflow: hidden;
-                            }
-                            
-                            .info-desc {
-                                max-width: 50%;
-                                text-align: left;
-                                line-height: 2;
-                                margin: 0 0 1rem 1rem;
-                                padding: 1rem;
-                            }
-                            
-                            .header-container {
-                                display: grid;
-                                grid-template-columns: 1fr 4fr;
-                                grid-row: repeat(4, 1fr);
-                                padding: 0;
-                            }
-                            
-                            .podcast-platforms {
-                                display: flex;
-                                flex-direction: row;
-                                flex-wrap: wrap;
-                                justify-content: space-around;
-                                padding: 0.9rem;
-                            }
-                            
-                            .email-form {
-                                margin: 1rem;
-                                width: 70%;
-                                display: flex;
-                                flex-direction: row;
-                                flex-wrap: nowrap;
-                                justify-content: space-around;
-                            }
-                            
-                            input[type='email'] {
-                                padding: 10px 30px;
-                                width: 70%;
-                            }
-                            
-                            button[type='submit'] {
-                                background-color: var(--button-backgroundColor);
-                                padding: 5px 20px;
-                                cursor: pointer;
-                                border: 2px solid var(--button-backgroundColor);
-                                width: 50%;
-                            }
-                            
-                            .hidden {
-                                display: none;
-                            }
-                            
-                            .show {
-                                border: 2px solid red;
-                                padding: 0.5rem;
-                            }
-                            /* for small screens */
-                            
-                            @media screen and (max-width: 600px) {}
-                            /* larger screens and small tablets */
-                            
-                            @media screen and (max-width: 1000px) {
-                                .nav-container {
-                                    grid-column-start: 1;
-                                    grid-column-end: 2;
-                                    grid-row-start: 1;
-                                    grid-row-end: 3;
-                                    margin-left: 0.5rem;
-                                }
-                                .hero-img-container {
-                                    grid-column-start: 2;
-                                    grid-column-end: 5;
-                                    grid-row-start: 1;
-                                    grid-row-end: 4;
-                                    background-image: url('images/images/image-host-tablet.jpg');
-                                    background-repeat: no-repeat;
-                                    background-size: cover;
-                                    height: 90vh;
-                                    background-position: center center;
-                                    margin: 0;
-                                }
-                                hero-info-container {
-                                    grid-row-start: 2;
-                                    grid-row-end: 4;
-                                    grid-column-start: 1;
-                                    grid-column-end: 4;
-                                    margin-top: -2rem;
-                                    width: 100%;
-                                    color: #ffffff;
-                                    background-color: var(--main-backgroundColor);
-                                    border: 5px solid var(--main-backgroundColor);
-                                }
+                @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+                 :root {
+                    --main-backgroundColor: #111725;
+                    --main-headingColor: #77DFC0;
+                    --button-backgroundColor: #5BDAAC;
+                    font-family: 'Source Sans Pro', sans-serif;
+                }
+                
+                *,
+                 ::before,
+                 ::after {
+                    box-sizing: border-box;
+                }
+                
+                body {
+                    background-color: var(--main-backgroundColor);
+                }
+                
+                .nav-container {
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                    margin-left: 1rem;
+                }
+                
+                .hero-img-container {
+                    grid-column-start: 2;
+                    grid-column-end: 5;
+                    grid-row-start: 1;
+                    grid-row-end: 4;
+                    background-image: url('images/images/image-host-desktop.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 100vh;
+                    background-position: center center;
+                }
+                
+                .hero-info-container {
+                    grid-row-start: 2;
+                    grid-row-end: 5;
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                    margin-top: -2rem;
+                    max-width: 60%;
+                    color: #ffffff;
+                    background-color: var(--main-backgroundColor);
+                    border: 5px solid var(--main-backgroundColor);
+                }
+                
+                h1 {
+                    margin: 2rem 2rem 0 2rem;
+                    color: var(--button-backgroundColor);
+                    font-size: 250%;
+                }
+                
+                .heading-one {
+                    color: #ffffff;
+                }
+                
+                .dotted-container {
+                    grid-row-start: 3;
+                    grid-row-end: 5;
+                    grid-column-end: 5;
+                    background-image: url('images/images/bg-pattern-dots.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center center;
+                    padding: 6rem;
+                    margin-bottom: -7rem;
+                }
+                
+                .sr-only {
+                    position: absolute;
+                    left: -10000px;
+                    top: auto;
+                    width: 1px;
+                    height: 1px;
+                    overflow: hidden;
+                }
+                
+                .info-desc {
+                    max-width: 50%;
+                    text-align: left;
+                    line-height: 2;
+                    margin: 0 0 1rem 1rem;
+                    padding: 1rem;
+                }
+                
+                .header-container {
+                    display: grid;
+                    grid-template-columns: 1fr 4fr;
+                    grid-row: repeat(4, 1fr);
+                    padding: 0;
+                }
+                
+                .podcast-platforms {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    padding: 2rem;
+                }
+                
+                .email-form {
+                    margin: 1rem;
+                    width: 70%;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: space-around;
+                }
+                
+                input[type='email'] {
+                    padding: 10px 30px;
+                    width: 70%;
+                }
+                
+                button[type='submit'] {
+                    background-color: var(--button-backgroundColor);
+                    padding: 5px 20px;
+                    cursor: pointer;
+                    border: 2px solid var(--button-backgroundColor);
+                    width: 50%;
+                }
+                
+                .hidden {
+                    display: none;
+                }
+                
+                .show {
+                    border: 2px solid red;
+                    padding: 0.5rem;
+                }
+                /* for small screens */
+                
+                @media screen and (max-width: 600px) {
+                    .header-container {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-content: center;
+                    }
+                    .nav-container {
+                        margin: 1rem 0 2rem 0;
+                        display: flex;
+                        justify-content: center;
+                        align-content: center;
+                    }
+                    .hero-img-container {
+                        display: none;
+                    }
+                    .hero-info-container {
+                        width: 100%;
+                    }
+                    .hero-info {
+                        margin-top: 2rem;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-content: center;
+                        padding: 2rem;
+                        width: min-content;
+                    }
+                    h1 {
+                        font-size: 150%;
+                        width: 80vw;
+                        padding: 2rem;
+                        margin: 1rem auto;
+                    }
+                    .info-desc {
+                        max-width: 100%;
+                        margin: 1rem auto;
+                    }
+                    .podcast-platforms img {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        margin-top: 0.3rem;
+                    }
+                    .email-form {
+                        width: 90% !important;
+                        margin: 0 0.5rem;
+                    }
+                    input {
+                        width: 60vw !important;
+                        padding: 12px 20px;
+                    }
+                    .podcast-platforms img {
+                        display: flex;
+                        flex-direction: row;
+                        margin-top: 0.3rem;
+                    }
+                }
+                /* larger screens and small tablets */
+                
+                @media screen and (max-width: 1000px) {
+                    .nav-container {
+                        grid-column-start: 1;
+                        grid-column-end: 2;
+                        grid-row-start: 1;
+                        grid-row-end: 3;
+                        margin-left: 0.5rem;
+                    }
+                    .hero-img-container {
+                        grid-column-start: 2;
+                        grid-column-end: 5;
+                        grid-row-start: 1;
+                        grid-row-end: 4;
+                        background-image: url('images/images/image-host-tablet.jpg');
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        height: 100vh;
+                        background-position: center center;
+                        margin: 0;
+                    }
+                    .hero-info-container {
+                        grid-row-start: 2;
+                        grid-row-end: 4;
+                        grid-column-start: 1;
+                        grid-column-end: 4;
+                        margin-top: -2rem;
+                        max-width: 70%;
+                        color: #ffffff;
+                        background-color: var(--main-backgroundColor);
+                        border: 5px solid var(--main-backgroundColor);
+                    }
+                    .email-form {
+                        margin: 1rem;
+                        width: 80%;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        justify-content: space-around;
+                    }
+                }
