@@ -12,7 +12,7 @@ function validateEmail(email) {
 
 }
 
-
+//validates email and updates error message
 emailInput.addEventListener("keydown", function(e) {
     const mail = emailInput.value;
     if (!validateEmail(mail)) {
